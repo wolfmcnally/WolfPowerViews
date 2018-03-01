@@ -1,6 +1,7 @@
 use_frameworks!
+
+platform :ios, '9.3'
+
 target 'WolfPowerViews_Tests' do
   pod 'WolfPowerViews', :path => '../'
-  
-  
 end

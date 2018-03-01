@@ -196,10 +196,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WolfPowerViews_Tests/Pods-WolfPowerViews_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework",
+				"${BUILT_PRODUCTS_DIR}/WolfCore/WolfCore.framework",
 				"${BUILT_PRODUCTS_DIR}/WolfPowerViews/WolfPowerViews.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonCryptoModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WolfCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WolfPowerViews.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
