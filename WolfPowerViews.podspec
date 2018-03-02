@@ -25,10 +25,13 @@ A collection of views and view controllers that make app development more conven
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wolfmcnally' => 'wolf@wolfmcnally.com' }
   s.source           = { :git => 'https://github.com/wolfmcnally/WolfPowerViews.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/wolfmcnally'
+
+  s.swift_version = '4.0'
+  s.dependency 'SwiftLint'
+  s.source_files = 'WolfPowerViews/Classes/**/*'
 
   s.ios.deployment_target = '9.3'
-
-  s.source_files = 'WolfPowerViews/Classes/**/*'
 
   # s.resource_bundles = {
   #   'WolfPowerViews' => ['WolfPowerViews/Assets/*.png']
