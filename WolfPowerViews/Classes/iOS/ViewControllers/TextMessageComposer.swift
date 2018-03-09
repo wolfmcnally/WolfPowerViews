@@ -1,6 +1,6 @@
 //
 //  TextMessageComposer.swift
-//  WolfCore iOS
+//  WolfPowerViews
 //
 //  Created by Wolf McNally on 1/30/18.
 //  Copyright © 2018 WolfMcNally.com. All rights reserved.

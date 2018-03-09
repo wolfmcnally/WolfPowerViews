@@ -1,6 +1,6 @@
 //
 //  PagingView.swift
-//  WolfCore
+//  WolfPowerViews
 //
 //  Created by Wolf McNally on 5/17/16.
 //  Copyright © 2016 WolfMcNally.com. All rights reserved.

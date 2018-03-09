@@ -1,6 +1,6 @@
 //
 //  ImageViewerDismissGestureRecognizer.swift
-//  WolfCore
+//  WolfPowerViews
 //
 //  Created by Wolf McNally on 7/22/16.
 //  Copyright © 2016 WolfMcNally.com. All rights reserved.
