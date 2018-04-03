@@ -122,7 +122,7 @@ public class ImagePickerViewController: UIImagePickerController {
         }
 
         let availableMediaRawTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        let availableMediaTypes = availableMediaRawTypes.flatMap { MediaType(rawValue: $0) }
+        let availableMediaTypes = availableMediaRawTypes.compactMap { MediaType(rawValue: $0) }
         let effectiveMediaTypes = Set(availableMediaTypes).intersection(Set(requestedMediaTypes))
         guard !effectiveMediaTypes.isEmpty else {
             presentingViewController.presentOKAlert(withMessage: "No requested media types are available."¶, identifier: "notMediaTypeCapable")

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WolfPowerViews'
-  s.version          = '0.1.2'
+  s.version          = '0.2'
   s.summary          = 'A collection of views and view controllers that make app development more convenient.'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ A collection of views and view controllers that make app development more conven
   s.source           = { :git => 'https://github.com/wolfmcnally/WolfPowerViews.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/wolfmcnally'
 
-  s.swift_version = '4.0'
+  s.swift_version = '4.1'
   s.dependency 'SwiftLint'
   s.source_files = 'WolfPowerViews/Classes/**/*'
 
@@ -39,5 +39,5 @@ A collection of views and view controllers that make app development more conven
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'WolfCore', '~> 2.1'
+  s.dependency 'WolfCore', '~> 2.2'
 end
