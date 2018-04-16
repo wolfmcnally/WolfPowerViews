@@ -110,7 +110,11 @@ public class ImagePickerViewController: UIImagePickerController {
             case .photoLibrary, .savedPhotosAlbum:
                 message = "The photo library is unavailable."¶
             case .camera:
-                message = isSimulator ? "The simulator cannot take photos." : "There is no camera available on this device."¶
+                #if targetEnvironment(simulator)
+                message = "The simulator cannot take photos."
+                #else
+                message = "There is no camera available on this device."¶
+                #endif
             }
             presentingViewController.presentOKAlert(withMessage: message, identifier: "notImagePickerCapable")
             return

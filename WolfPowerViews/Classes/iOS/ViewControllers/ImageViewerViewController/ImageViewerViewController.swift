@@ -47,7 +47,7 @@ public class ImageViewerViewController: ViewController {
         automaticallyAdjustsScrollViewInsets = false
     }
 
-    private lazy var imageView: ImageView = .init()
+    private lazy var imageView = ImageView()
 
     public var imageViewFrame: CGRect {
         view.layoutIfNeeded()

@@ -215,7 +215,7 @@ open class BannerViewController: ViewController {
         setNeedsStatusBarAppearanceUpdate()
     }
 
-    private lazy var bannersView: BannersView = .init()
+    private lazy var bannersView = BannersView()
 
     open override func build() {
         super.build()

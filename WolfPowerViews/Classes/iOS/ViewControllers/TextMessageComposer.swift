@@ -35,10 +35,12 @@ public class TextMessageComposer: NSObject {
     }
 
     public static func presentComposer(fromViewController presentingViewController: UIViewController, recipients: [String], body: String, attachments: [TextMessageAttachment]? = nil, completion: CompletionBlock? = nil) {
-        guard !isSimulator else {
-            presentingViewController.presentOKAlert(withMessage: "The simulator cannot send text messages.", identifier: "notTextMessageCapable")
-            return
-        }
+        #if targetEnvironment(simulator)
+
+        presentingViewController.presentOKAlert(withMessage: "The simulator cannot send text messages.", identifier: "notTextMessageCapable")
+        return
+
+        #else
 
         guard MFMessageComposeViewController.canSendText() else {
             presentingViewController.presentOKAlert(withMessage: "Your device is not configured to send text messages."¶, identifier: "notTextMessageCapable")
@@ -62,6 +64,8 @@ public class TextMessageComposer: NSObject {
         self.completion = completion
 
         presentingViewController.present(viewController, animated: true, completion: nil)
+
+        #endif
     }
 }
 

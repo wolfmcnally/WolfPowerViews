@@ -12,7 +12,7 @@ import WolfCore
 open class BounceButton: Button {
     @IBInspectable public var waitForBounce: Bool = true
 
-    private lazy var bounceAnimation: BounceAnimation = .init(view: self)
+    private lazy var bounceAnimation = BounceAnimation(view: self)
 
     open override var isHighlighted: Bool {
         didSet(oldHighlighted) {

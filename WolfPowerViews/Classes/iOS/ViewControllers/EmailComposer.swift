@@ -35,10 +35,12 @@ public class EmailComposer: NSObject {
     }
 
     public static func presentComposer(fromViewController presentingViewController: UIViewController, toRecipients recipients: [String], subject: String, body: String, attachments: [EmailMessageAttachment]? = nil, completion: CompletionBlock? = nil) {
-        guard !isSimulator else {
-            presentingViewController.presentOKAlert(withMessage: "The simulator cannot send e-mail.", identifier: "notEmailCapable")
-            return
-        }
+        #if targetEnvironment(simulator)
+
+        presentingViewController.presentOKAlert(withMessage: "The simulator cannot send e-mail.", identifier: "notEmailCapable")
+        return
+        
+        #else
 
         guard MFMailComposeViewController.canSendMail() else {
             presentingViewController.presentOKAlert(withMessage: "Your device is not configured to send email."¶, identifier: "notEmailCapable")
@@ -63,6 +65,8 @@ public class EmailComposer: NSObject {
         self.completion = completion
 
         presentingViewController.present(viewController, animated: true, completion: nil)
+
+        #endif
     }
 }
 

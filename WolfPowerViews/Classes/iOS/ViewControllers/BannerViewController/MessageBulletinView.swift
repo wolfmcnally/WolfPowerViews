@@ -15,17 +15,17 @@ public class MessageBulletinView<B: MessageBulletin>: BulletinView<B> {
         🍒.clipsToBounds = true
     }
 
-    private lazy var stackView: VerticalStackView = .init() • { 🍒 in
+    private lazy var stackView = VerticalStackView() • { 🍒 in
         🍒.distribution = .fill
         🍒.alignment = .fill
     }
 
-    private lazy var titleLabel: Label = .init() • { 🍒 in
+    private lazy var titleLabel = Label() • { 🍒 in
         🍒.numberOfLines = 1
         🍒.textAlignment = .left
     }
 
-    private lazy var messageLabel: Label = .init() • { 🍒 in
+    private lazy var messageLabel = Label() • { 🍒 in
         🍒.numberOfLines = 0
         🍒.textAlignment = .left
     }
