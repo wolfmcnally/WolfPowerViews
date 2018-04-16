@@ -110,7 +110,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				DC2924D23E3854D79B5A8497 /* [CP] Embed Pods Frameworks */,
-				DE0D77E3416D4BA4D7CE6326 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,21 +208,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WolfPowerViews_Tests/Pods-WolfPowerViews_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE0D77E3416D4BA4D7CE6326 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WolfPowerViews_Tests/Pods-WolfPowerViews_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

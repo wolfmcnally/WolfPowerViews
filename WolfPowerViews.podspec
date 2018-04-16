@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WolfPowerViews'
-  s.version          = '0.2'
+  s.version          = '0.2.1'
   s.summary          = 'A collection of views and view controllers that make app development more convenient.'
 
 # This description is used to generate tags and improve search results.
