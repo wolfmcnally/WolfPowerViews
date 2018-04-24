@@ -9,8 +9,8 @@ import WolfCore
 
 public class ScrollingZoomablePDFView: View {
     public var pdf: PDF? {
-        get { return tiledPDFView.pdf }
-        set { tiledPDFView.pdf = newValue }
+        get { return contentView.pdf }
+        set { contentView.pdf = newValue }
     }
 
     public var minimumZoomScale: CGFloat = 0.5 { didSet { syncZoom() } }
@@ -18,7 +18,7 @@ public class ScrollingZoomablePDFView: View {
     public var levelsOfDetail = 4 { didSet { syncZoom() } }
     public var levelsOfDetailBias = 3 { didSet { syncZoom() } }
 
-    private lazy var tiledPDFView = TiledPDFView() • {
+    public private(set) lazy var contentView = TiledPDFView() • {
         $0.levelsOfDetail = self.levelsOfDetail
         $0.levelsOfDetailBias = self.levelsOfDetailBias
     }
@@ -32,26 +32,26 @@ public class ScrollingZoomablePDFView: View {
     public override func setup() {
         self => [
             scrollView => [
-                tiledPDFView
+                contentView
             ]
         ]
 
         scrollView.constrainFrameToFrame()
-        tiledPDFView.constrainFrameToFrame()
+        contentView.constrainFrameToFrame()
         syncZoom()
     }
 
     private func syncZoom() {
         scrollView.minimumZoomScale = minimumZoomScale
         scrollView.maximumZoomScale = maximumZoomScale
-        tiledPDFView.levelsOfDetail = levelsOfDetail
-        tiledPDFView.levelsOfDetailBias = levelsOfDetailBias
+        contentView.levelsOfDetail = levelsOfDetail
+        contentView.levelsOfDetailBias = levelsOfDetailBias
     }
 }
 
 extension ScrollingZoomablePDFView: UIScrollViewDelegate {
     public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return tiledPDFView
+        return contentView
     }
 
     public func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
