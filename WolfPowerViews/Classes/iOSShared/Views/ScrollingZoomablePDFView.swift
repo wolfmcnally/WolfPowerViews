@@ -13,6 +13,8 @@ public class ScrollingZoomablePDFView: View {
         set { contentView.pdf = newValue }
     }
 
+    public var onZoom: Block?
+
     public var minimumZoomScale: CGFloat = 0.5 { didSet { syncZoom() } }
     public var maximumZoomScale: CGFloat = 8.0 { didSet { syncZoom() } }
     public var levelsOfDetail = 4 { didSet { syncZoom() } }
@@ -52,6 +54,10 @@ public class ScrollingZoomablePDFView: View {
 extension ScrollingZoomablePDFView: UIScrollViewDelegate {
     public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return contentView
+    }
+
+    public func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        onZoom?()
     }
 
     public func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
