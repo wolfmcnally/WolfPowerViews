@@ -2,7 +2,7 @@ use_frameworks!
 
 platform :ios, '9.3'
 
-# pod 'WolfCore', :path => '../WolfCore/'
+# pod 'WolfCore', :path => '../../WolfCore/'
 pod 'WolfCore', '~> 2.2'
 
 target 'WolfPowerViews_Tests' do
