@@ -5,10 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/WolfPowerViews.svg?style=flat)](http://cocoapods.org/pods/WolfPowerViews)
 [![Platform](https://img.shields.io/cocoapods/p/WolfPowerViews.svg?style=flat)](http://cocoapods.org/pods/WolfPowerViews)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
 
 ## Installation
