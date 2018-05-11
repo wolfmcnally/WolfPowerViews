@@ -16,6 +16,10 @@ it, simply add the following line to your Podfile:
 pod 'WolfPowerViews'
 ```
 
+## Requirements
+
+WolfPowerViews is written in Swift 4.1 and depends on [WolfCore](http://github.com/wolfmcnally/WolfCore).
+
 ## Author
 
 ironwolf, wolf@wolfmcnally.com
